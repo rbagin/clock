@@ -1,4 +1,3 @@
-const log = (name, val) => console.log(`\n\n`, name, val);
 
 const hourHand = document.querySelector('[data-hour-hand]')
 const minuteHand = document.querySelector('[data-minute-hand]')
