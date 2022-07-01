@@ -1,4 +1,4 @@
-function setInterval(setClock,1000)
+const log = (name, val) => console.log(`\n\n`, name, val);
 
 const hourHand = document.querySelector('[data-hour-hand]')
 const minuteHand = document.querySelector('[data-minute-hand]')
@@ -15,7 +15,7 @@ function setClock() {
 }
 
 function setRotation(element, rotationRatio) {
-    element.style.setProperty('--rotation', rotationRatio * 360)
+    element.style.setProperty('rotate', `${rotationRatio * 360}deg`)
 }
-
-setClock()
+setClock() // start in the correct position
+setInterval(setClock, 1000) // increment clock every second
